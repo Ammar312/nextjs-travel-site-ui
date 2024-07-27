@@ -11,8 +11,8 @@ const Footer = () => {
             <Image src="hilink-logo.svg" alt="logo" width={74} height={29} />
           </Link>
           <div className="flex flex-wrap gap-10 sm:justify-between md:flex-1">
-            {FOOTER_LINKS.map((coulmns) => (
-              <FooterCoulmn title={coulmns.title}>
+            {FOOTER_LINKS.map((coulmns, index) => (
+              <FooterCoulmn title={coulmns.title} key={index}>
                 <ul className="regular-14 flex flex-col gap-4 text-gray-30">
                   {coulmns.links.map((link) => (
                     <Link href="/" key={link}>
